@@ -1,19 +1,32 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- You can also add or configure plugins by creating files in this `plugins/` folder
--- PLEASE REMOVE THE EXAMPLES YOU HAVE NO INTEREST IN BEFORE ENABLING THIS FILE
--- Here are some examples:
-
 ---@type LazySpec
 return {
 
   -- == Examples of Adding Plugins ==
-
-  "andweeb/presence.nvim",
+  -- starting\loading it
+  -- {
+  --   "numToStr/Comment.nvim",
+  --   config = function()
+  --     require("Comment").setup()
+  --[[ {
+        toggler = {
+          line = "cml", -- Line-comment toggle keymap
+          block = "gbc", -- Block-comment toggle keymap
+        },
+        opleader = {
+          line = "cm", ---Line-comment keymap
+          block = "gb", ---Block-comment keymap
+        },
+      } ]]
+  -- end,
+  --   enabled = false,
+  --   lazy = true,
+  -- },
+  -- "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
+    enabled = false,
   },
 
   -- == Examples of Overriding Plugins ==
@@ -54,6 +67,7 @@ return {
       local luasnip = require "luasnip"
       luasnip.filetype_extend("javascript", { "javascriptreact" })
     end,
+    enabled = false,
   },
 
   {
