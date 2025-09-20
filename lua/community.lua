@@ -15,5 +15,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.yaml" },
   -- import/override with your plugins folder
 }
