@@ -40,7 +40,31 @@ return {
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
-      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+
+      lua_ls = {
+        settings = {
+          Lua = {
+            runtime = {
+              version = "LuaJIT",
+              path = {
+                "?.lua",
+                "?/init.lua",
+              },
+            },
+            diagnostics = {
+              globals = { "vim" },
+              disable = { "unused-function" },
+            },
+            hint = { enable = true, paramType = true },
+            workspace = {
+              library = {
+                vim.env.RUNTIME,
+              },
+              checkThirdParty = false,
+            },
+          },
+        },
+      },
     },
 
     -- customize how language servers are attached

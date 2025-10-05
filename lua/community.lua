@@ -21,4 +21,5 @@ return {
   { import = "astrocommunity.completion.cmp-nvim-lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python-ruff" },
+  -- import/override with your plugins folder
 }

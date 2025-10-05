@@ -22,11 +22,14 @@ return {
   --   lazy = true,
   -- },
   -- "andweeb/presence.nvim",
+  { dir = "~/Rien/asteroids", name = "asteroids", config = function() end },
+  { "akinsho/toggleterm.nvim", version = "*", opts = {
+    direction = "float",
+  } },
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
-    enabled = false,
   },
 
   -- == Examples of Overriding Plugins ==
@@ -67,7 +70,6 @@ return {
       local luasnip = require "luasnip"
       luasnip.filetype_extend("javascript", { "javascriptreact" })
     end,
-    enabled = false,
   },
 
   {
